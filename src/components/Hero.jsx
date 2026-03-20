@@ -56,7 +56,7 @@ export default function Hero() {
       {/* CTA */}
       <motion.div {...fadeUp(0.6)} className="flex flex-col sm:flex-row gap-4 items-center justify-center">
         <a
-          href="#register"
+          href="mailto:partners@bharatofficesetu.com"
           className="group inline-flex items-center gap-2 bg-indigo hover:bg-saffron text-white font-inter font-semibold text-sm tracking-widest uppercase px-8 py-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
         >
           Reserve Your Seat

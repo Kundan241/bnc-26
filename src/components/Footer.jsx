@@ -27,7 +27,7 @@ export default function Footer() {
             Seats are limited to 200 curated attendees. Submit your request and our team will confirm your participation within 48 hours.
           </p>
           <a
-            href="mailto:conclave@bharatofficesetu.com?subject=BNC 2026 — Invitation Request"
+            href="mailto:partners@bharatofficesetu.com?subject=BNC 2026 — Invitation Request"
             className="group inline-flex items-center gap-2 bg-saffron hover:bg-saffron-500 text-white font-inter font-semibold text-sm tracking-widest uppercase px-8 py-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
           >
             Request Your Invitation
