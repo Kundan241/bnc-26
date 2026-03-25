@@ -32,7 +32,7 @@ export default function Header() {
 
         {/* Nav links — desktop */}
         <nav className="hidden md:flex items-center gap-8">
-          {["Vision","Agenda","Venue"].map(s => (
+          {["Vision","Agenda","Speakers","Venue"].map(s => (
             <a
               key={s}
               href={`#${s.toLowerCase()}`}

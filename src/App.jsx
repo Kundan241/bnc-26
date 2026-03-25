@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Vision from "./components/Vision";
 import AgendaTimeline from "./components/AgendaTimeline";
+import Speakers from "./components/Speakers";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
         <Hero />
         <Vision />
         <AgendaTimeline />
+        <Speakers />
         <Footer />
       </main>
     </div>
