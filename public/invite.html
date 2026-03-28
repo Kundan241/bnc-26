@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're Invited — Bharat Nirman Conclave 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap');
+
+    body {
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .invite-wrap {
+      font-family: 'DM Sans', sans-serif;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .invite-card {
+      background: #fff;
+      border: 1px solid rgba(13,35,70,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    .invite-top {
+      background: #0D2346;
+      padding: 36px 40px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .invite-top::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #C9820A, transparent);
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .orn-line { width: 50px; height: 0.5px; background: rgba(201,130,10,0.6); }
+    .orn-diamond { width: 6px; height: 6px; background: #C9820A; transform: rotate(45deg); flex-shrink: 0; }
+
+    .invite-eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(201,130,10,0.85);
+      margin-bottom: 10px;
+    }
+
+    .invite-event-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.3px;
+      margin-bottom: 6px;
+    }
+
+    .invite-event-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.3px;
+    }
+
+    .invite-body {
+      padding: 36px 40px;
+    }
+
+    .invite-salutation {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-style: italic;
+      color: #C9820A;
+      margin-bottom: 12px;
+    }
+
+    .invite-para {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: #333;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .invite-para strong {
+      font-weight: 500;
+      color: #0D2346;
+    }
+
+    .details-block {
+      background: #F7F5F2;
+      border-left: 3px solid #C9820A;
+      border-radius: 0 6px 6px 0;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+
+    .detail-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .detail-row:last-child { margin-bottom: 0; }
+
+    .detail-dot {
+      width: 5px; height: 5px;
+      background: #C9820A;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .detail-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #0D2346;
+      min-width: 70px;
+      padding-top: 1px;
+    }
+
+    .detail-value {
+      font-size: 13px;
+      font-weight: 400;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 0.5px;
+      background: rgba(13,35,70,0.1);
+      margin: 28px 0;
+    }
+
+    .speakers-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C9820A;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .speakers-label::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: rgba(201,130,10,0.3);
+    }
+
+    .speaker-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 0.5px solid rgba(13,35,70,0.07);
+    }
+
+    .speaker-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .speaker-initials {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .si-gold { background: #C9820A; }
+    .si-navy { background: #0D2346; }
+    .si-teal { background: #0F6E56; }
+    .si-rust { background: #8B3A1C; }
+
+    .speaker-tag {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #C9820A;
+      margin-bottom: 2px;
+    }
+
+    .speaker-name-inv {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0D2346;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .speaker-role-inv {
+      font-size: 11px;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    .agenda-section { margin: 28px 0; }
+
+    .agenda-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C9820A;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .agenda-label::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: rgba(201,130,10,0.3);
+    }
+
+    .agenda-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .agenda-time {
+      font-size: 11px;
+      font-weight: 500;
+      color: #0D2346;
+      min-width: 58px;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+
+    .agenda-title {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .agenda-row.highlight .agenda-time,
+    .agenda-row.highlight .agenda-title {
+      color: #C9820A;
+      font-weight: 500;
+    }
+
+    .ticket-block {
+      background: #0D2346;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .ticket-left { }
+
+    .ticket-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+    }
+
+    .ticket-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .ticket-gst {
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 3px;
+    }
+
+    .ticket-cta {
+      background: #C9820A;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 10px 22px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    
+    .ticket-cta:hover {
+      background: #b67609;
+    }
+
+    .invite-closing {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .signature-block { margin-top: 20px; }
+
+    .sig-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #0D2346;
+      margin-bottom: 2px;
+    }
+
+    .sig-role {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 2px;
+    }
+
+    .sig-contact {
+      font-size: 12px;
+      color: #C9820A;
+    }
+
+    .invite-footer {
+      background: #F7F5F2;
+      border-top: 0.5px solid rgba(13,35,70,0.1);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-logo-mark {
+      width: 26px; height: 26px;
+      background: #0D2346;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-logo-mark span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .footer-brand-text {
+      font-size: 11px;
+      color: #888;
+    }
+
+    .footer-note {
+      font-size: 10px;
+      color: #bbb;
+      font-style: italic;
+      text-align: right;
+    }
+
+    .cocktail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201,130,10,0.1);
+      border: 0.5px solid rgba(201,130,10,0.3);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: 500;
+      color: #8B5A00;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 5px; height: 5px;
+      background: #C9820A;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="invite-wrap">
+<div class="invite-card">
+
+  <!-- TOP HEADER -->
+  <div class="invite-top">
+    <div class="ornament">
+      <div class="orn-line"></div>
+      <div class="orn-diamond"></div>
+      <div class="orn-line"></div>
+    </div>
+    <p class="invite-eyebrow">Personal Invitation · Bharat Office Setu</p>
+    <h1 class="invite-event-name">Bharat Nirman<br>Conclave 2026</h1>
+    <p class="invite-event-sub">Nation Building Through Digital Business Infrastructure</p>
+  </div>
+
+  <!-- BODY -->
+  <div class="invite-body">
+
+    <p class="invite-salutation" id="salutation">Dear Guest,</p>
+
+    <p class="invite-para">
+      On behalf of <strong>Bharat Office Setu (BOS Services)</strong>, it is my honour to extend to you a personal invitation to the <strong>Bharat Nirman Conclave 2026</strong> — an invitation-only gathering of India's most purposeful entrepreneurs, MSMEs, policymakers, and business leaders.
+    </p>
+
+    <p class="invite-para">
+      This is not a conference. It is a curated conversation about building India — through digital infrastructure, domestic capability centres, and the kind of ecosystem collaboration that compounds over years. We believe you belong in that room.
+    </p>
+
+    <div class="cocktail-badge">
+      <div class="badge-dot"></div>
+      Followed by Exclusive Cocktail Networking & Dinner
+    </div>
+
+    <!-- Event Details -->
+    <div class="details-block">
+      <div class="detail-row">
+        <div class="detail-dot"></div>
+        <div class="detail-label">Date</div>
+        <div class="detail-value">Friday, 10 April 2026</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-dot"></div>
+        <div class="detail-label">Time</div>
+        <div class="detail-value">3:00 PM onwards · Cocktail & Dinner to follow</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-dot"></div>
+        <div class="detail-label">Venue</div>
+        <div class="detail-value">Speaker Hall, Constitution Club of India<br>Vithalbhai Patel House, Rafi Marg, New Delhi – 110 001</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-dot"></div>
+        <div class="detail-label">Format</div>
+        <div class="detail-value">Invitation Only · 200+ Delegates · Strictly Non-Transferable</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Speakers -->
+    <div class="speakers-label">Confirmed Speakers</div>
+
+    <div class="speaker-row">
+      <div class="speaker-initials si-navy">LC</div>
+      <div>
+        <p class="speaker-tag">Keynote — Digital Business & Compliance</p>
+        <p class="speaker-name-inv">Lionel Charles</p>
+        <p class="speaker-role-inv">Founder, CEO & MD — IndiaFilings · India's largest business services platform</p>
+      </div>
+    </div>
+
+    <div class="speaker-row">
+      <div class="speaker-initials si-teal">SK</div>
+      <div>
+        <p class="speaker-tag">Keynote — Financial Strategy & Wealth</p>
+        <p class="speaker-name-inv">Sanjay Kathuria</p>
+        <p class="speaker-role-inv">CFA | MBA Finance | Retired at 39 · 16 Years Corporate Leadership</p>
+      </div>
+    </div>
+
+    <div class="speaker-row">
+      <div class="speaker-initials si-rust">NK</div>
+      <div>
+        <p class="speaker-tag">Speaker — Legal, Compliance & Financial Advisory</p>
+        <p class="speaker-name-inv">Advocate Naresh Kalra</p>
+        <p class="speaker-role-inv">Corporate Legal Counsel & Financial Advisor, Chandigarh · ED & PMLA Consultant</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Agenda -->
+    <div class="agenda-section">
+      <div class="agenda-label">Programme at a Glance</div>
+
+      <div class="agenda-row"><div class="agenda-time">3:00 PM</div><div class="agenda-title">Registration & Networking Tea</div></div>
+      <div class="agenda-row"><div class="agenda-time">3:20 PM</div><div class="agenda-title">Opening & Welcome Address</div></div>
+      <div class="agenda-row highlight"><div class="agenda-time">3:30 PM</div><div class="agenda-title">Inaugural Address by Chief Guest</div></div>
+      <div class="agenda-row"><div class="agenda-time">4:05 PM</div><div class="agenda-title">Keynote: Building Scalable Digital Enterprises</div></div>
+      <div class="agenda-row"><div class="agenda-time">4:35 PM</div><div class="agenda-title">Panel: Domestic Capability Centres & Shared Workspaces</div></div>
+      <div class="agenda-row"><div class="agenda-time">5:15 PM</div><div class="agenda-title">Networking Break — High Tea</div></div>
+      <div class="agenda-row"><div class="agenda-time">5:30 PM</div><div class="agenda-title">Masterclass: Compliance to Commerce</div></div>
+      <div class="agenda-row"><div class="agenda-time">6:00 PM</div><div class="agenda-title">Fireside Chat: The Road to Viksit Bharat 2047</div></div>
+      <div class="agenda-row"><div class="agenda-time">6:30 PM</div><div class="agenda-title">Closing Dialogue: Ecosystem Collaboration</div></div>
+      <div class="agenda-row highlight"><div class="agenda-time">7:00 PM</div><div class="agenda-title">Invitation-Only Cocktail Networking & Dinner ✦</div></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Ticket -->
+    <div class="ticket-block">
+      <div class="ticket-left">
+        <p class="ticket-label">Delegate Pass</p>
+        <p class="ticket-price">₹1,500</p>
+        <p class="ticket-gst">+ 18% GST (₹270) · Total ₹1,770 per delegate</p>
+      </div>
+      <a href="https://in.bookmyshow.com/events/bharat-nirman-conclave-2026/ET00492820" target="_blank" class="ticket-cta">Book Your Seat</a>
+    </div>
+
+    <!-- Closing -->
+    <p class="invite-closing">
+      "We look forward to welcoming you to what promises to be one of the most meaningful evenings in India's entrepreneurial calendar this year."
+    </p>
+
+    <div class="signature-block">
+      <p class="sig-name">Gaurav Kumar Sharma</p>
+      <p class="sig-role">BOS Services · Bharat Office Setu Private Limited</p>
+      <p class="sig-contact">+91 99996 82829 · partners@bharatofficesetu.com</p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="invite-footer">
+    <div class="footer-brand">
+      <div class="footer-logo-mark"><span>BOS</span></div>
+      <span class="footer-brand-text">Bharat Office Setu Private Limited · bharatnirmanconclave.com</span>
+    </div>
+    <p class="footer-note">Speakers tentatively confirmed · subject to official confirmation</p>
+  </div>
+
+</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const salutationEl = document.getElementById('salutation');
+    
+    if (name) {
+      salutationEl.textContent = `Dear ${name},`;
+      document.title = `Invitation for ${name} — Bharat Nirman Conclave 2026`;
+    } else {
+      salutationEl.textContent = `Dear Guest,`;
+      document.title = `You're Invited — Bharat Nirman Conclave 2026`;
+    }
+  });
+</script>
+
+</body>
+</html>
