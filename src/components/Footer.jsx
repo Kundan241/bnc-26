@@ -65,7 +65,7 @@ export default function Footer() {
             {/* Col 3 — Date */}
             <div>
               <p className="font-inter text-[9px] font-semibold tracking-[4px] uppercase text-saffron mb-4">Date & Time</p>
-              <p className="font-playfair font-bold text-lg">10 April 2026</p>
+              <p className="font-playfair font-bold text-lg">23 April 2026</p>
               <p className="font-inter text-sm text-gray-400 mt-1">3:00 PM – 7:00 PM IST</p>
             </div>
           </div>
