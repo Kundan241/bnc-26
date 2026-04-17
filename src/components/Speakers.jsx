@@ -52,7 +52,7 @@ export default function Speakers() {
             Distinguished Speakers
           </h2>
           <p className="font-inter text-sm text-gray-400 mt-3 tracking-wide">
-            23 April 2026 &middot; Constitution Club of India, New Delhi
+            8th May 2026 &middot; Constitution Club of India, New Delhi
           </p>
           <div className="mt-5 mx-auto w-16 h-0.5 bg-saffron" />
         </motion.div>

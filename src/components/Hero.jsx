@@ -21,7 +21,7 @@ export default function Hero() {
       <motion.div {...fadeUp(0.1)} className="flex items-center gap-4 mb-10">
         <div className="w-16 h-px bg-saffron opacity-60" />
         <p className="font-inter text-xs font-semibold tracking-[5px] uppercase text-saffron">
-          ✦ 23 April 2026 &middot; Constitution Club of India, New Delhi
+          ✦ 8th May 2026 &middot; Constitution Club of India, New Delhi
         </p>
         <div className="w-16 h-px bg-saffron opacity-60" />
       </motion.div>

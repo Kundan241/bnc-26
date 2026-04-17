@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import ChiefGuest from "./components/ChiefGuest";
 import Vision from "./components/Vision";
 import AgendaTimeline from "./components/AgendaTimeline";
 import Speakers from "./components/Speakers";
@@ -30,6 +31,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <ChiefGuest />
         <Vision />
         <AgendaTimeline />
         <Speakers />
