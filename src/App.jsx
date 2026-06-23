@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
+import EventBanner from "./components/EventBanner";
 import Hero from "./components/Hero";
 import ChiefGuest from "./components/ChiefGuest";
 import Vision from "./components/Vision";
@@ -30,6 +31,7 @@ export default function App() {
 
       <Header />
       <main>
+        <EventBanner />
         <Hero />
         <ChiefGuest />
         <Vision />
